@@ -66,33 +66,25 @@ export default function Hero() {
             track record of impactful projects makes me an asset to any team.
           </Typography>
 
-          <Box
-            sx={{
-              display: { xs: "none", sm: "flex" },
-              flexDirection: "column",
-              gap: 1,
-            }}
+          <Stack
+            // direction={{ xs: "row", sm: "row" }}
+            alignSelf="center"
+            spacing={1}
+            useFlexGap
+            sx={{ pt: 2, width: { xs: "auto", sm: "auto" } }}
           >
-            <Stack
-              direction={{ xs: "column", sm: "row" }}
-              alignSelf="center"
-              spacing={1}
-              useFlexGap
-              sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
+            <Button
+              style={{ width: 100 }}
+              variant="contained"
+              color="primary"
+              sx={{ flexShrink: 0 }}
+              component="a"
+              href="./chanuthperera.pdf"
+              download="chanuthperera.pdf"
             >
-              <Button
-                style={{ width: 100 }}
-                variant="contained"
-                color="primary"
-                sx={{ flexShrink: 0 }}
-                component="a"
-                href="./chanuthperera.pdf"
-                download="chanuthperera.pdf"
-              >
-                Download
-              </Button>
-            </Stack>
-          </Box>
+              Download
+            </Button>
+          </Stack>
 
           <Stack
             direction={{ xs: "column", sm: "row" }}
