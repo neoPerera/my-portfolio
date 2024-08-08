@@ -24,8 +24,6 @@ pipeline {
             steps {
                 script {
                     // Ensure the destination directory exists
-                    sh 'mkdir -p /home/chanuth/jenkins'
-                    
                     // Copy all files from the workspace to the specified directory
                     sh 'cp -r ${WORKSPACE}/* /home/chanuth/jenkins/'
                 }
