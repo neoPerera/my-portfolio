@@ -12,6 +12,14 @@ pipeline {
                 }
             }
         }
+        stage('Copy Files') {
+            steps {
+                script {
+                    // Copy all files from the workspace to the specified directory
+                    sh 'cp -r ${WORKSPACE}/* /home/chanuth/jenkins/'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 // Add your build steps here
