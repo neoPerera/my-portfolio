@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/neoPerera/my-portfolio.git'
+                git 'https://github.com/neoPerera/my-portfolio.git',
+                echo "Workspace directory: ${env.WORKSPACE}"
             }
         }
         stage('Build') {
