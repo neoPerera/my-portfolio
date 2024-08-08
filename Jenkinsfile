@@ -12,9 +12,20 @@ pipeline {
                 }
             }
         }
+        stage('List Files') {
+            steps {
+                script {
+                    // List all files in the workspace directory
+                    sh 'ls -la ${WORKSPACE}'
+                }
+            }
+        }
         stage('Copy Files') {
             steps {
                 script {
+                    // Ensure the destination directory exists
+                    sh 'mkdir -p /home/chanuth/jenkins'
+                    
                     // Copy all files from the workspace to the specified directory
                     sh 'cp -r ${WORKSPACE}/* /home/chanuth/jenkins/'
                 }
